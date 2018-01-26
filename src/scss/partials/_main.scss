@@ -1,232 +1,231 @@
 body.bio-expander {
 
   .gallery-items {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 0;
-  padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0;
+    padding: 0;
 
-  .gallery-item {
-    margin: 0 2%;
-    display: inline-block;
-    vertical-align: top;
-    @include transition(height 500ms ease);
-    @media only screen and (min-width: 768px){
-      padding: 10px 0;
-      margin: 0;
-      margin-right: 3px;
-    }
-
-    &.active {
-      .gallery-contents::after {
-        border-bottom-width: 30px;
-      }
-    }
-
-    .gallery-contents {
-      position: relative;
-      margin-bottom: 40px;
-      width: 35vw;
+    .gallery-item {
+      margin: 0 2%;
+      display: inline-block;
+      vertical-align: top;
+      @include transition(height 500ms ease);
       @media only screen and (min-width: 768px){
-        width: 18vw;
+        padding: 10px 0;
+        margin: 0;
+        margin-right: 3px;
       }
 
-      .name {
-        margin-bottom: 3px;
-        text-transform: uppercase;
-        font-size: 15px;
-        line-height: 1.62;
-        letter-spacing: 0.5px;
-        color: $burger-red;
-        font-weight: bolder;
-        -ms-word-break: break-all;
-            word-break: break-all;
-            // Non standard for webkit
-            word-break: break-word;
-        @include css3-prefix(hyphens, auto);
-        @media only screen and (min-width: 648px){
-          font-size: 16px;
+      &.active {
+        .gallery-contents::after {
+          border-bottom-width: 30px;
         }
       }
 
-      &::after {
-        display: block;
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        margin-left: -30px;
-        margin-bottom: -40px;
-        width: 0;
-        height: 0;
-        content: '';
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom-style: solid;
-        border-bottom-width: 0px;
-        color: $burger-red;
-        @include transition(border-bottom-width 500ms ease);
-      }
-
-      .gallery-tigger {
+      .gallery-contents {
         position: relative;
-        overflow: hidden;
-      }
-      .photo {
-        display: block;
-        margin-bottom: 25px;
-        line-height: 1.42857143;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        @include transition(border .2s ease-in-out);
-        position: relative;
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        padding: 0px;
-        border: 0px;
-        cursor: pointer;
-
-        img {
-          width: 100%;
-          display: block;
-          height: auto;
-          vertical-align: middle;
+        margin-bottom: 40px;
+        width: 35vw;
+        @media only screen and (min-width: 768px){
+          width: 18vw;
         }
 
-        &:hover {
-          .quote {
-            @include transform(translateY(0));
+        .name {
+          margin-bottom: 3px;
+          text-transform: uppercase;
+          font-size: 15px;
+          line-height: 1.62;
+          letter-spacing: 0.5px;
+          color: $burger-red;
+          font-weight: bolder;
+          -ms-word-break: break-all;
+              word-break: break-all;
+              // Non standard for webkit
+              word-break: break-word;
+          @include css3-prefix(hyphens, auto);
+          @media only screen and (min-width: 648px){
+            font-size: 16px;
           }
         }
 
-        .quote {
-          color: #ffffff;
-          padding: 20px 30px;
-          background-color: rgba(0, 0, 0, 0.75);
+        &::after {
+          display: block;
           position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
+          bottom: 0px;
+          left: 50%;
+          margin-left: -30px;
+          margin-bottom: -40px;
+          width: 0;
+          height: 0;
+          content: '';
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-bottom-style: solid;
+          border-bottom-width: 0px;
+          color: $burger-yellow;
+          @include transition(border-bottom-width 500ms ease);
+        }
+
+        .gallery-tigger {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .photo {
+          display: block;
+          margin-bottom: 25px;
+          line-height: 1.42857143;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          @include transition(border .2s ease-in-out);
+          position: relative;
           width: 100%;
-          @include transform(translateY(100%));
-          @include transform-origin(50% 100%);
-          @include css3-prefix(transition-property, transform);
-          @include css3-prefix(transition-duration, 0.2s);
-          @include css3-prefix(transition-timing-function, ease-out);
+          height: auto;
+          overflow: hidden;
+          padding: 0px;
+          border: 0px;
+          cursor: pointer;
 
-          .hover-info {
-            position: absolute;
-            left: 50%;
-            bottom: 5%;
+          img {
             width: 100%;
-            padding: 0px 2px;
-            @include transform(translate(-50%, -50%));
+            display: block;
+            height: auto;
+            vertical-align: middle;
+          }
 
-            @media only screen and (min-width: 648px){
-              padding: 0px 20px;
+          &:hover {
+            .quote {
+              @include transform(translateY(0));
             }
+          }
 
-            p {
-              display: none;
-            }
-            a.read-button,
-            a.read-button:visited {
-              background-color: $burger-yellow;
-              color: $burger-red;
-              display: inline-block;
-              cursor: pointer;
-              letter-spacing: 1.5px;
-              font-size: 12px;
-              line-height: 12px;
-              padding: 17px 20% 15px;
-              text-decoration: none;
-              @include css3-prefix(box-sizing, border-box);
+          .quote {
+            color: #ffffff;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.75);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            @include transform(translateY(100%));
+            @include transform-origin(50% 100%);
+            @include css3-prefix(transition-property, transform);
+            @include css3-prefix(transition-duration, 0.2s);
+            @include css3-prefix(transition-timing-function, ease-out);
 
-              @media only screen and (min-width: 768px){
-                font-size: 14px;
-                line-height: 14px;
+            .hover-info {
+              position: absolute;
+              left: 50%;
+              bottom: 5%;
+              width: 100%;
+              padding: 0px 2px;
+              @include transform(translate(-50%, -50%));
+
+              @media only screen and (min-width: 648px){
+                padding: 0px 20px;
+              }
+
+              p {
+                display: none;
+              }
+              a.read-button,
+              a.read-button:visited {
+                background-color: $burger-red;
+                color: $burger-yellow;
+                display: inline-block;
+                cursor: pointer;
+                letter-spacing: 1.5px;
+                font-size: 12px;
+                line-height: 12px;
+                padding: 17px 20% 15px;
+                text-decoration: none;
+                @include css3-prefix(box-sizing, border-box);
+
+                @media only screen and (min-width: 768px){
+                  font-size: 14px;
+                  line-height: 14px;
+                }
               }
             }
           }
-        }
-        .name {
-          text-transform: uppercase;
-          font-size: 16px;
-        }
-        .position {
-          margin-bottom: 20px;
+
+          .name {
+            text-transform: uppercase;
+            font-size: 16px;
+          }
+
+          .position {
+            margin-bottom: 20px;
+          }
         }
       }
-    }
 
-    .gallery-expander {
-      position: absolute;
-      background: $burger-yellow;
-      color: $black;
-      width: 100%;
-      left: 0;
-      right: 0;
-      overflow: hidden;
-      max-height: 0;
-      @include transition(max-height 500ms ease);
-      zoom: 1;
-
-      .gallery-expander-contents {
-        position: relative;
+      .gallery-expander {
+        position: absolute;
+        background: $burger-yellow;
+        color: $black;
         width: 100%;
-        margin: 0 auto;
-        padding: 40px 10px;
-        @media only screen and (min-width: 768px){
-          padding: 40px 12.5vw;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        max-height: 0;
+        @include transition(max-height 500ms ease);
+        zoom: 1;
+
+        .gallery-expander-contents {
+          position: relative;
+          width: 100%;
+          margin: 0 auto;
+          padding: 40px 10px;
+          @media only screen and (min-width: 768px){
+            padding: 40px 12.5vw;
+          }
+
+          &::before {
+            content: "";
+            display: table;
+          }
         }
 
-        &::before {
-          content: "";
-          display: table;
+        .vert-line {
+          background-color: $white;
+          max-height: 85%;
+          @media only screen and (max-width: 575px){
+            left: 20px;
+          }
+        }
+
+        .contents {
+          padding: 0 50px;
+
+          .name {
+            letter-spacing: 1px;
+          }
+
+          span {
+            // font-family: ;
+          }
         }
       }
-
-      .vert-line {
-        background-color: $white;
-        max-height: 85%;
-        @media only screen and (max-width: 575px){
-          left: 20px;
-        }
-      }
-
-      .contents {
-        padding: 0 50px;
-
-        .name {
-          letter-spacing: 1px;
-        }
-
-        span {
-          // font-family: ;
-        }
-      }
-
     }
   }
-}
 
-.gallery-trigger-close {
-  z-index: 5;
-  position: absolute;
-  top: 30px;
-  right: 7.5vw;
-  color: $black;
-  cursor: pointer !important;
-  letter-spacing: 1px;
-  font-size: 10px;
+  .gallery-trigger-close {
+    z-index: 5;
+    position: absolute;
+    top: 30px;
+    right: 7.5vw;
+    color: $black;
+    cursor: pointer !important;
+    letter-spacing: 1px;
+    font-size: 10px;
 
-  @media only screen and (min-width: 768px){
-    top: 60px;
-    right: 12.5vw;
+    @media only screen and (min-width: 768px){
+      top: 60px;
+      right: 12.5vw;
+    }
   }
-}
-
-
-
 }
