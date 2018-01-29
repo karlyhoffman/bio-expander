@@ -1,4 +1,5 @@
 body.bio-expander {
+  padding-bottom: 60px;
 
   .gallery-items {
     text-align: center;
@@ -99,13 +100,14 @@ body.bio-expander {
           &:hover {
             .quote {
               @include transform(translateY(0));
+              background-color: rgba(0, 0, 0, 0.75);
             }
           }
 
           .quote {
             color: #ffffff;
             padding: 20px 30px;
-            background-color: rgba(0, 0, 0, 0.75);
+            // background-color: rgba(0, 0, 0, 0.75);
             position: absolute;
             top: 0;
             bottom: 0;
@@ -137,6 +139,7 @@ body.bio-expander {
               a.read-button:visited {
                 background-color: $burger-red;
                 color: $burger-yellow;
+                font-family: $font-nunito;
                 display: inline-block;
                 cursor: pointer;
                 letter-spacing: 1.5px;
@@ -204,13 +207,14 @@ body.bio-expander {
           padding: 0 50px;
 
           .name {
+            color: $burger-red;
             letter-spacing: 1px;
             font-family: $font-nunito;
             font-weight: 600;
           }
 
-          span {
-            // font-family: ;
+          p {
+            font-size: 1.5rem;
           }
         }
       }
@@ -232,4 +236,18 @@ body.bio-expander {
       right: 12.5vw;
     }
   }
+}
+
+// Temp Photo Placement
+.linda {
+  margin-top: 5.5%;
+}
+.tina {
+  margin-top: 21%;
+}
+.gene {
+  margin-top: 47%;
+}
+.louise {
+  margin-top: 21%;
 }
