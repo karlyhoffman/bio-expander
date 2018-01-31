@@ -1,4 +1,5 @@
 # Bob's Burgers Bio Expander
+[View Demo](https://codepen.io/karlyhoffman/full/NyPbLv/)
 
 ## Project Deliverables:
 - A photo gallery that displays bios when a user clicks on a photo.
