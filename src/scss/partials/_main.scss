@@ -147,6 +147,7 @@ body.bio-expander {
                 line-height: 12px;
                 padding: 17px 20% 15px;
                 text-decoration: none;
+                box-sizing: border-box;
                 @include transition(all .2s ease-in-out);
                 @include css3-prefix(box-sizing, border-box);
 
@@ -158,6 +159,7 @@ body.bio-expander {
               a.read-button:hover {
                 background-color: $burger-yellow;
                 color: $burger-red;
+                border: 1px solid $burger-red;
               }
             }
           }
